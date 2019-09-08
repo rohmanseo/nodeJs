@@ -1,8 +1,10 @@
 //Menambahkan modul 'http'
 var http = require('http');
 
-//Membuat sebuah server dengan port 8080
+//Membuat Server
 http.createServer(function(req,res){
-	res.writeHead(200,{'Content-Type': 'text/html'});
-	res.end("Hello World.");
+	//Memberikan respon kepada client yang me request
+	res.write('Halo Dunia.');
+	//Mengakhiri respon
+	res.end();
 }).listen(8080);
