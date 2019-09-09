@@ -1,10 +1,8 @@
 var http = require('http');
-
 //Port yang digunakan
 const PORT = 8080;
 
 http.createServer(function(req,res){
-	//REGEX
 	var path = req.url.replace(/\/?(?:\?.*)?$/, '').toLowerCase();
 	switch(path){
 		//Arahkan ke homepage
